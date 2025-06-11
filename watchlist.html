@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- fontawsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Movie Watchlist</title>
+</head>
+<body>
+    <header>
+        <h1>My Watchlist</h1>
+        <a href="index.html">Search for movies</a>
+    </header>
+    <main>
+        <div class="search-bar">
+            <label for="movie-search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="text" id="movie-search" placeholder="Blade Runner" required>
+            <button id="search-btn" class="search-btn">Search</button>
+        </div>
+        <div id="movie-list">
+            <div>
+                <p class="watchlist-p">Your watchlist is looking a little empty..</p>
+                <button id="add-movies-btn"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> /js/Lets add some movies!</button>
+            </div>
+        </div>
+    </main>
+    <script src="/js/common.js" type="module"></script>
+    <script src="/js/watchlist.html" type="module"></script>
+</body>
+</html>

@@ -28,10 +28,16 @@ header {
     background-blend-mode: overlay;
     background-attachment:scroll;
 }
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+
 main {
     width: 100%;
     justify-items: center;
-    /* margin: 0 auto; */
 }
 
 .search-bar {
@@ -67,10 +73,57 @@ main {
     font-size: 0.8em;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    position: relative;
 }
 
-div#movie-list {
+.search-btn::before {
+    content: '';
+    background-color: white;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 7px;
+    transition: width .5s;
+}
+
+.search-btn:hover:before {
+    width: 55%;
+    height: 2px;
+}
+
+div#movie-list div{
+    margin-top: 30dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+div#movie-list div i, div#movie-list div p {
+    color: #2E2E2F;
+
+}
+
+div#movie-list div i.fa-film {
+    font-size: 4.375rem;
+}
+
+div#movie-list div p {
+    font-size: 1.125rem;
+}
+
+div#movie-list div .watchlist-p {
+    color: #787878;
+}
+
+#add-movies-btn {
+    margin-top: 1.25em;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+button i.fa-circle-plus {
+    color: white;
+    font-size: 1.125rem;
+    margin-right: 4px;
 }
