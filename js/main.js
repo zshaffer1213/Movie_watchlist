@@ -106,4 +106,4 @@ const dummyMovies = [
 
 
 
-// renderMovies(dummyMovies)
+renderMovies(dummyMovies)
