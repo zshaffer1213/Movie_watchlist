@@ -1,4 +1,4 @@
-export function renderMovies(arr, el) {
+export function renderMovies(arr, el, button="plus") {
     el.innerHTML = arr.map( movie => {
         const {Poster, Title, Genre, Plot, imdbRating, Runtime, imdbID} = movie
         return `
@@ -7,7 +7,7 @@ export function renderMovies(arr, el) {
         <h2 class="movie-title">${Title} <span class="movie-rating"> ${imdbRating !== "N/A" ? "⭐" + imdbRating : ''}</span></h2>
         <p class="movie-runtime">${Runtime}</p>
         <p class="movie-genre">${Genre}</p>
-        <button id="to-watchlist" data-id="${imdbID}"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> Add to watchlist</button>
+        <button id="${ button === "plus" ? "to" : "remove" }-watchlist" data-id="${imdbID}"><i class="fa-solid fa-circle-${button}" style="color: #ffffff;"></i> ${ button === "plus" ? "Add to watchlist" : "Remove from watchlist" }</button>
         <p class="movie-plot">${Plot}</p>
         </div>
         `
